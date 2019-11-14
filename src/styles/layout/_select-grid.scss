@@ -1,0 +1,27 @@
+.grid {
+	display: grid;
+	margin: 0 auto;
+	max-width: 144rem;
+	grid-template-columns: 1fr repeat(4, minmax(20rem, 25rem)) 1fr;
+	grid-template-areas: '. prodA prodB prodC prodD .';
+	grid-template-rows: 15rem 15rem;
+	gap: 2rem;
+
+	&__item {
+		&--ambulant {
+			grid-area: prodA;
+		}
+
+		&--zahn {
+			grid-area: prodB;
+		}
+
+		&--vorsorge {
+			grid-area: prodC;
+		}
+
+		&--stationaer {
+			grid-area: prodD;
+		}
+	}
+}
